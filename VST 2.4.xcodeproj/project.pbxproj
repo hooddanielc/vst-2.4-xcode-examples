@@ -22,6 +22,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		9F79288A19A9235100B2B1A5 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2514FF45F000F8D31F /* audioeffect.cpp */; };
+		9F79288B19A9235100B2B1A5 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
+		9F79288C19A9235100B2B1A5 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
+		9F79289A19A923DB00B2B1A5 /* sine-wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289719A923DB00B2B1A5 /* sine-wave.cpp */; };
+		9F79289B19A923DB00B2B1A5 /* sine-wave.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F79289919A923DB00B2B1A5 /* sine-wave.plist */; };
+		9F79289C19A923FC00B2B1A5 /* sine-wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289719A923DB00B2B1A5 /* sine-wave.cpp */; };
+		9F79289D19A9242B00B2B1A5 /* sine-wave.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289819A923DB00B2B1A5 /* sine-wave.h */; };
 		DCB17D2B14FF467800F8D31F /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
 		DCB17D2C14FF467B00F8D31F /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
 		DCB17D2D14FF467C00F8D31F /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2514FF45F000F8D31F /* audioeffect.cpp */; };
@@ -53,6 +60,10 @@
 
 /* Begin PBXFileReference section */
 		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		9F79289319A9235100B2B1A5 /* sine-wave.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sine-wave.vst"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F79289719A923DB00B2B1A5 /* sine-wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "sine-wave.cpp"; sourceTree = "<group>"; };
+		9F79289819A923DB00B2B1A5 /* sine-wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sine-wave.h"; sourceTree = "<group>"; };
+		9F79289919A923DB00B2B1A5 /* sine-wave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sine-wave.plist"; sourceTree = "<group>"; };
 		DCB17D1814FF449C00F8D31F /* aeffguieditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = aeffguieditor.cpp; path = vstgui.sf/vstgui/aeffguieditor.cpp; sourceTree = "<group>"; };
 		DCB17D1B14FF44DD00F8D31F /* vstcontrols.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstcontrols.cpp; path = vstgui.sf/vstgui/vstcontrols.cpp; sourceTree = "<group>"; };
 		DCB17D1E14FF44F000F8D31F /* vstgui.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstgui.cpp; path = vstgui.sf/vstgui/vstgui.cpp; sourceTree = "<group>"; };
@@ -78,6 +89,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F79288F19A9235100B2B1A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4476970093DAE42008998C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FF51E50929FB0400DDED7A /* Info.plist */,
+				9F79289519A923DB00B2B1A5 /* sine-wave */,
 				DCB17D1714FF440900F8D31F /* vstsdk2.4 */,
 				F4476968093DAE36008998C4 /* adelay */,
 				F4FF521D0929FBDF00DDED7A /* vstxsynth */,
@@ -130,8 +149,27 @@
 			children = (
 				F4FF52220929FBF500DDED7A /* vstxsynth.vst */,
 				F4476974093DAE42008998C4 /* adelay.vst */,
+				9F79289319A9235100B2B1A5 /* sine-wave.vst */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9F79289519A923DB00B2B1A5 /* sine-wave */ = {
+			isa = PBXGroup;
+			children = (
+				9F79289619A923DB00B2B1A5 /* source */,
+			);
+			path = "sine-wave";
+			sourceTree = "<group>";
+		};
+		9F79289619A923DB00B2B1A5 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				9F79289719A923DB00B2B1A5 /* sine-wave.cpp */,
+				9F79289819A923DB00B2B1A5 /* sine-wave.h */,
+				9F79289919A923DB00B2B1A5 /* sine-wave.plist */,
+			);
+			path = source;
 			sourceTree = "<group>";
 		};
 		DC657D1D14FF5102007951FA /* source */ = {
@@ -250,6 +288,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9F79288719A9235100B2B1A5 /* sine-wave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F79289019A9235100B2B1A5 /* Build configuration list for PBXNativeTarget "sine-wave" */;
+			buildPhases = (
+				9F79288819A9235100B2B1A5 /* Resources */,
+				9F79288919A9235100B2B1A5 /* Sources */,
+				9F79288F19A9235100B2B1A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sine-wave";
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = "vst 2.4 examples";
+			productReference = 9F79289319A9235100B2B1A5 /* sine-wave.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
 		F4476969093DAE42008998C4 /* adelay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4476971093DAE42008998C4 /* Build configuration list for PBXNativeTarget "adelay" */;
@@ -307,15 +363,24 @@
 				F4476C1A093DDA87008998C4 /* all */,
 				F4476969093DAE42008998C4 /* adelay */,
 				F4FF52210929FBF500DDED7A /* vstxsynth */,
+				9F79288719A9235100B2B1A5 /* sine-wave */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F79288819A9235100B2B1A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F447696A093DAE42008998C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F79289B19A923DB00B2B1A5 /* sine-wave.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +394,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F79288919A9235100B2B1A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F79288A19A9235100B2B1A5 /* audioeffect.cpp in Sources */,
+				9F79288B19A9235100B2B1A5 /* audioeffectx.cpp in Sources */,
+				9F79288C19A9235100B2B1A5 /* vstplugmain.cpp in Sources */,
+				9F79289C19A923FC00B2B1A5 /* sine-wave.cpp in Sources */,
+				9F79289D19A9242B00B2B1A5 /* sine-wave.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F447696B093DAE42008998C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +413,7 @@
 				DCB17D2D14FF467C00F8D31F /* audioeffect.cpp in Sources */,
 				DCB17D2B14FF467800F8D31F /* audioeffectx.cpp in Sources */,
 				DCB17D2C14FF467B00F8D31F /* vstplugmain.cpp in Sources */,
+				9F79289A19A923DB00B2B1A5 /* sine-wave.cpp in Sources */,
 				F4476991093DAEA1008998C4 /* adelay.cpp in Sources */,
 				F4476A76093DCD05008998C4 /* adelaymain.cpp in Sources */,
 			);
@@ -408,6 +486,26 @@
 			};
 			name = Release;
 		};
+		9F79289119A9235100B2B1A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "sine-wave/source/sine-wave.plist";
+				PRODUCT_NAME = "sine-wave";
+			};
+			name = Debug;
+		};
+		9F79289219A9235100B2B1A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				INFOPLIST_FILE = "sine-wave/source/sine-wave.plist";
+				PRODUCT_NAME = "sine-wave";
+			};
+			name = Release;
+		};
 		F4476972093DAE42008998C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -474,6 +572,15 @@
 			buildConfigurations = (
 				4FADC23808B4156C00ABE55E /* Debug */,
 				4FADC23908B4156C00ABE55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F79289019A9235100B2B1A5 /* Build configuration list for PBXNativeTarget "sine-wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F79289119A9235100B2B1A5 /* Debug */,
+				9F79289219A9235100B2B1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
