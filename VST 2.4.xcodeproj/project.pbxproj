@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				9F79289F19A93DC900B2B1A5 /* PBXTargetDependency */,
 				F4476C1E093DDA96008998C4 /* PBXTargetDependency */,
 				F4476C20093DDA98008998C4 /* PBXTargetDependency */,
 			);
@@ -25,7 +26,6 @@
 		9F79288A19A9235100B2B1A5 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2514FF45F000F8D31F /* audioeffect.cpp */; };
 		9F79288B19A9235100B2B1A5 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
 		9F79288C19A9235100B2B1A5 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
-		9F79289A19A923DB00B2B1A5 /* sine-wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289719A923DB00B2B1A5 /* sine-wave.cpp */; };
 		9F79289B19A923DB00B2B1A5 /* sine-wave.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F79289919A923DB00B2B1A5 /* sine-wave.plist */; };
 		9F79289C19A923FC00B2B1A5 /* sine-wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289719A923DB00B2B1A5 /* sine-wave.cpp */; };
 		9F79289D19A9242B00B2B1A5 /* sine-wave.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289819A923DB00B2B1A5 /* sine-wave.h */; };
@@ -42,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9F79289E19A93DC900B2B1A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F79288719A9235100B2B1A5;
+			remoteInfo = "sine-wave";
+		};
 		F4476C1D093DDA96008998C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
@@ -413,7 +420,6 @@
 				DCB17D2D14FF467C00F8D31F /* audioeffect.cpp in Sources */,
 				DCB17D2B14FF467800F8D31F /* audioeffectx.cpp in Sources */,
 				DCB17D2C14FF467B00F8D31F /* vstplugmain.cpp in Sources */,
-				9F79289A19A923DB00B2B1A5 /* sine-wave.cpp in Sources */,
 				F4476991093DAEA1008998C4 /* adelay.cpp in Sources */,
 				F4476A76093DCD05008998C4 /* adelaymain.cpp in Sources */,
 			);
@@ -434,6 +440,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9F79289F19A93DC900B2B1A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F79288719A9235100B2B1A5 /* sine-wave */;
+			targetProxy = 9F79289E19A93DC900B2B1A5 /* PBXContainerItemProxy */;
+		};
 		F4476C1E093DDA96008998C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F4FF52210929FBF500DDED7A /* vstxsynth */;
