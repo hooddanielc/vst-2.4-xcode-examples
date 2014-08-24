@@ -29,6 +29,10 @@
 		9F79289B19A923DB00B2B1A5 /* sine-wave.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F79289919A923DB00B2B1A5 /* sine-wave.plist */; };
 		9F79289C19A923FC00B2B1A5 /* sine-wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289719A923DB00B2B1A5 /* sine-wave.cpp */; };
 		9F79289D19A9242B00B2B1A5 /* sine-wave.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F79289819A923DB00B2B1A5 /* sine-wave.h */; };
+		9F7928A319A945F400B2B1A5 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2514FF45F000F8D31F /* audioeffect.cpp */; };
+		9F7928A419A945F400B2B1A5 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
+		9F7928A519A945F400B2B1A5 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
+		9F7928B319A968BB00B2B1A5 /* drone-capture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F7928B219A968BB00B2B1A5 /* drone-capture.cpp */; };
 		DCB17D2B14FF467800F8D31F /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
 		DCB17D2C14FF467B00F8D31F /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
 		DCB17D2D14FF467C00F8D31F /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2514FF45F000F8D31F /* audioeffect.cpp */; };
@@ -71,6 +75,9 @@
 		9F79289719A923DB00B2B1A5 /* sine-wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "sine-wave.cpp"; sourceTree = "<group>"; };
 		9F79289819A923DB00B2B1A5 /* sine-wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sine-wave.h"; sourceTree = "<group>"; };
 		9F79289919A923DB00B2B1A5 /* sine-wave.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sine-wave.plist"; sourceTree = "<group>"; };
+		9F7928AC19A945F400B2B1A5 /* drone-capture.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "drone-capture.vst"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F7928AD19A945F400B2B1A5 /* sine-wave copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "sine-wave copy-Info.plist"; path = "/Users/dhoodlum/Documents/git/vst-workspace/sine-wave copy-Info.plist"; sourceTree = "<absolute>"; };
+		9F7928B219A968BB00B2B1A5 /* drone-capture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "drone-capture.cpp"; sourceTree = "<group>"; };
 		DCB17D1814FF449C00F8D31F /* aeffguieditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = aeffguieditor.cpp; path = vstgui.sf/vstgui/aeffguieditor.cpp; sourceTree = "<group>"; };
 		DCB17D1B14FF44DD00F8D31F /* vstcontrols.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstcontrols.cpp; path = vstgui.sf/vstgui/vstcontrols.cpp; sourceTree = "<group>"; };
 		DCB17D1E14FF44F000F8D31F /* vstgui.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstgui.cpp; path = vstgui.sf/vstgui/vstgui.cpp; sourceTree = "<group>"; };
@@ -103,6 +110,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F7928A819A945F400B2B1A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4476970093DAE42008998C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +140,7 @@
 				08FB77ADFE841716C02AAC07 /* Source */,
 				089C1671FE841209C02AAC07 /* Frameworks */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
+				9F7928AD19A945F400B2B1A5 /* sine-wave copy-Info.plist */,
 			);
 			name = "vst 2.4 examples";
 			sourceTree = "<group>";
@@ -143,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F4FF51E50929FB0400DDED7A /* Info.plist */,
+				9F7928AE19A9477D00B2B1A5 /* drone-capture */,
 				9F79289519A923DB00B2B1A5 /* sine-wave */,
 				DCB17D1714FF440900F8D31F /* vstsdk2.4 */,
 				F4476968093DAE36008998C4 /* adelay */,
@@ -157,6 +173,7 @@
 				F4FF52220929FBF500DDED7A /* vstxsynth.vst */,
 				F4476974093DAE42008998C4 /* adelay.vst */,
 				9F79289319A9235100B2B1A5 /* sine-wave.vst */,
+				9F7928AC19A945F400B2B1A5 /* drone-capture.vst */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +192,22 @@
 				9F79289719A923DB00B2B1A5 /* sine-wave.cpp */,
 				9F79289819A923DB00B2B1A5 /* sine-wave.h */,
 				9F79289919A923DB00B2B1A5 /* sine-wave.plist */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		9F7928AE19A9477D00B2B1A5 /* drone-capture */ = {
+			isa = PBXGroup;
+			children = (
+				9F7928AF19A9477D00B2B1A5 /* source */,
+			);
+			path = "drone-capture";
+			sourceTree = "<group>";
+		};
+		9F7928AF19A9477D00B2B1A5 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				9F7928B219A968BB00B2B1A5 /* drone-capture.cpp */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -313,6 +346,24 @@
 			productReference = 9F79289319A9235100B2B1A5 /* sine-wave.vst */;
 			productType = "com.apple.product-type.bundle";
 		};
+		9F7928A019A945F400B2B1A5 /* drone-capture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F7928A919A945F400B2B1A5 /* Build configuration list for PBXNativeTarget "drone-capture" */;
+			buildPhases = (
+				9F7928A119A945F400B2B1A5 /* Resources */,
+				9F7928A219A945F400B2B1A5 /* Sources */,
+				9F7928A819A945F400B2B1A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "drone-capture";
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = "vst 2.4 examples";
+			productReference = 9F7928AC19A945F400B2B1A5 /* drone-capture.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
 		F4476969093DAE42008998C4 /* adelay */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4476971093DAE42008998C4 /* Build configuration list for PBXNativeTarget "adelay" */;
@@ -371,12 +422,20 @@
 				F4476969093DAE42008998C4 /* adelay */,
 				F4FF52210929FBF500DDED7A /* vstxsynth */,
 				9F79288719A9235100B2B1A5 /* sine-wave */,
+				9F7928A019A945F400B2B1A5 /* drone-capture */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9F79288819A9235100B2B1A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F7928A119A945F400B2B1A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -410,6 +469,17 @@
 				9F79288C19A9235100B2B1A5 /* vstplugmain.cpp in Sources */,
 				9F79289C19A923FC00B2B1A5 /* sine-wave.cpp in Sources */,
 				9F79289D19A9242B00B2B1A5 /* sine-wave.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F7928A219A945F400B2B1A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F7928A319A945F400B2B1A5 /* audioeffect.cpp in Sources */,
+				9F7928A419A945F400B2B1A5 /* audioeffectx.cpp in Sources */,
+				9F7928A519A945F400B2B1A5 /* vstplugmain.cpp in Sources */,
+				9F7928B319A968BB00B2B1A5 /* drone-capture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +587,30 @@
 			};
 			name = Release;
 		};
+		9F7928AA19A945F400B2B1A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				INFOPLIST_FILE = "sine-wave copy-Info.plist";
+				PRODUCT_NAME = "drone-capture";
+			};
+			name = Debug;
+		};
+		9F7928AB19A945F400B2B1A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				INFOPLIST_FILE = "sine-wave copy-Info.plist";
+				PRODUCT_NAME = "drone-capture";
+			};
+			name = Release;
+		};
 		F4476972093DAE42008998C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,6 +686,15 @@
 			buildConfigurations = (
 				9F79289119A9235100B2B1A5 /* Debug */,
 				9F79289219A9235100B2B1A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F7928A919A945F400B2B1A5 /* Build configuration list for PBXNativeTarget "drone-capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F7928AA19A945F400B2B1A5 /* Debug */,
+				9F7928AB19A945F400B2B1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

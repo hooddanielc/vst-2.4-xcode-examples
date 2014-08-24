@@ -51,6 +51,5 @@ void SineWave::processReplacing (float** inputs, float** outputs, VstInt32 sampl
 }
 
 AudioEffect* createEffectInstance (audioMasterCallback audioMaster) {
-	return new SineWave (audioMaster);
+  return new SineWave (audioMaster);
 }
-
