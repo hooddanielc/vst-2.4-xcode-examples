@@ -4,7 +4,10 @@
 #include <memory>
 #include <map>
 
+#include <SDL2/SDL.h>
+
 #include "public.sdk/source/vst2.x/audioeffectx.h"
+#include "public.sdk/source/vst2.x/aeffeditor.h"
 
 using namespace std;
 
@@ -32,6 +35,61 @@ public:
   string name;
 };
 
+class DroneCaptureEditor : public AEffEditor {
+public:
+  ERect rect;
+
+  DroneCaptureEditor(AudioEffect *effect) : AEffEditor(effect) {
+    rect.left = rect.top = rect.right = rect.bottom = 0;
+    effect->setEditor(this);
+
+    if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
+      LogS("Error: SDL Could not initiate");
+    }
+  }
+
+  virtual bool getRect(ERect** mRect) {
+    LogS("Get Rect");
+    *mRect = &rect;
+    return true;
+  }
+
+  virtual bool open(void *window) {
+    systemWindow = SDL_CreateWindow(
+      "Hello World!",
+      100,
+      100,
+      640,
+      480,
+      SDL_WINDOW_SHOWN
+    );
+    return true;
+  }
+
+  virtual void idle() {
+    // check for SDL_Events
+    SDL_Event e;
+
+    while(SDL_PollEvent(&e)) {
+      if (e.type == SDL_WINDOWEVENT) {
+        switch (e.window.event) {
+          case SDL_WINDOWEVENT_CLOSE:
+            close();
+        }
+      }
+    }
+  }
+
+  virtual void close() {
+    SDL_DestroyWindow(static_cast<SDL_Window*>(systemWindow));
+    systemWindow = 0;
+  }
+
+  ~DroneCaptureEditor () {
+    SDL_Quit();
+  }
+};
+
 class DroneCapture : public AudioEffectX {
 private:
   long size;
@@ -53,7 +111,8 @@ public:
     setNumInputs(2);
     setNumOutputs(2);
     setUniqueID('1234');
-    resume();
+
+    this->editor = new DroneCaptureEditor(this);
   }
 
   ~DroneCapture() {};
@@ -98,7 +157,7 @@ public:
         // append reversed version of cache
         for (auto i = channel1cache.size(); i != 0; --i) {
           channel1cache.push_back(channel1cache[i - 1]);
-          channel2cache.push_back(channel1cache[i - 1]);
+          channel2cache.push_back(channel2cache[i - 1]);
         }
       }
 
@@ -115,7 +174,37 @@ public:
     }
   }
 
-  virtual void process (float **inputs, float **outputs, long sampleFrames) {}
+  virtual void process (float **inputs, float **outputs, long sampleFrames) {
+    float *in1 = inputs[0];
+    float *in2 = inputs[1];
+    float *out1 = outputs[0];
+    float *out2 = outputs[1];
+    
+    while (--sampleFrames >= 0) {
+      (*out1++) += (*in1++);
+      (*out2++) += (*in2++);
+    }
+  }
+
+  virtual long dispatcher (long opCode, long index, long value, void *ptr, float opt) {
+    return 0.0;
+  }
+
+  virtual void resume() {
+    LogS("Resume");
+  }
+
+  virtual void suspend() {
+    LogS("Suspend");
+  }
+
+  virtual void open() {
+    LogS("Open");
+  }
+
+  virtual void close() {
+    LogS("Close");
+  }
 };
 
 AudioEffect* createEffectInstance(audioMasterCallback audioMaster) {

@@ -33,6 +33,8 @@
 		9F7928A419A945F400B2B1A5 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
 		9F7928A519A945F400B2B1A5 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
 		9F7928B319A968BB00B2B1A5 /* drone-capture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F7928B219A968BB00B2B1A5 /* drone-capture.cpp */; };
+		9F7928CE19AA9F5500B2B1A5 /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F7928B419AA597900B2B1A5 /* SDL2.framework */; };
+		9F7928CF19AA9F6A00B2B1A5 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7928B419AA597900B2B1A5 /* SDL2.framework */; };
 		DCB17D2B14FF467800F8D31F /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
 		DCB17D2C14FF467B00F8D31F /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
 		DCB17D2D14FF467C00F8D31F /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2514FF45F000F8D31F /* audioeffect.cpp */; };
@@ -69,6 +71,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9F7928B619AA5F7E00B2B1A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Frameworks;
+			dstSubfolderSpec = 10;
+			files = (
+				9F7928CE19AA9F5500B2B1A5 /* SDL2.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		9F79289319A9235100B2B1A5 /* sine-wave.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sine-wave.vst"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +93,7 @@
 		9F7928AC19A945F400B2B1A5 /* drone-capture.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "drone-capture.vst"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7928AD19A945F400B2B1A5 /* sine-wave copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "sine-wave copy-Info.plist"; path = "/Users/dhoodlum/Documents/git/vst-workspace/sine-wave copy-Info.plist"; sourceTree = "<absolute>"; };
 		9F7928B219A968BB00B2B1A5 /* drone-capture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "drone-capture.cpp"; sourceTree = "<group>"; };
+		9F7928B419AA597900B2B1A5 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = frameworks/SDL2.framework; sourceTree = "<group>"; };
 		DCB17D1814FF449C00F8D31F /* aeffguieditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = aeffguieditor.cpp; path = vstgui.sf/vstgui/aeffguieditor.cpp; sourceTree = "<group>"; };
 		DCB17D1B14FF44DD00F8D31F /* vstcontrols.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstcontrols.cpp; path = vstgui.sf/vstgui/vstcontrols.cpp; sourceTree = "<group>"; };
 		DCB17D1E14FF44F000F8D31F /* vstgui.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstgui.cpp; path = vstgui.sf/vstgui/vstgui.cpp; sourceTree = "<group>"; };
@@ -114,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7928CF19AA9F6A00B2B1A5 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +165,7 @@
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F7928B419AA597900B2B1A5 /* SDL2.framework */,
 				F4476B78093DD675008998C4 /* QuickTime.framework */,
 				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
 			);
@@ -353,6 +371,7 @@
 				9F7928A119A945F400B2B1A5 /* Resources */,
 				9F7928A219A945F400B2B1A5 /* Sources */,
 				9F7928A819A945F400B2B1A5 /* Frameworks */,
+				9F7928B619AA5F7E00B2B1A5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -592,7 +611,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks",
+				);
 				INFOPLIST_FILE = "sine-wave copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "drone-capture";
 			};
 			name = Debug;
@@ -606,7 +630,12 @@
 				);
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks",
+				);
 				INFOPLIST_FILE = "sine-wave copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "drone-capture";
 			};
 			name = Release;
