@@ -33,8 +33,9 @@
 		9F7928A419A945F400B2B1A5 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
 		9F7928A519A945F400B2B1A5 /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
 		9F7928B319A968BB00B2B1A5 /* drone-capture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F7928B219A968BB00B2B1A5 /* drone-capture.cpp */; };
-		9F7928CE19AA9F5500B2B1A5 /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F7928B419AA597900B2B1A5 /* SDL2.framework */; };
-		9F7928CF19AA9F6A00B2B1A5 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7928B419AA597900B2B1A5 /* SDL2.framework */; };
+		9F79292319AAC02C00B2B1A5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F79292219AAC02C00B2B1A5 /* OpenGL.framework */; };
+		9F79292619AAE48700B2B1A5 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4476B78093DD675008998C4 /* QuickTime.framework */; };
+		9F79292719AAE48700B2B1A5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */; };
 		DCB17D2B14FF467800F8D31F /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2714FF463200F8D31F /* audioeffectx.cpp */; };
 		DCB17D2C14FF467B00F8D31F /* vstplugmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2914FF464500F8D31F /* vstplugmain.cpp */; };
 		DCB17D2D14FF467C00F8D31F /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCB17D2514FF45F000F8D31F /* audioeffect.cpp */; };
@@ -72,14 +73,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9F7928B619AA5F7E00B2B1A5 /* CopyFiles */ = {
+		9F7928B619AA5F7E00B2B1A5 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Frameworks;
 			dstSubfolderSpec = 10;
 			files = (
-				9F7928CE19AA9F5500B2B1A5 /* SDL2.framework in CopyFiles */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -93,7 +94,7 @@
 		9F7928AC19A945F400B2B1A5 /* drone-capture.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "drone-capture.vst"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7928AD19A945F400B2B1A5 /* sine-wave copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "sine-wave copy-Info.plist"; path = "/Users/dhoodlum/Documents/git/vst-workspace/sine-wave copy-Info.plist"; sourceTree = "<absolute>"; };
 		9F7928B219A968BB00B2B1A5 /* drone-capture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "drone-capture.cpp"; sourceTree = "<group>"; };
-		9F7928B419AA597900B2B1A5 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = frameworks/SDL2.framework; sourceTree = "<group>"; };
+		9F79292219AAC02C00B2B1A5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		DCB17D1814FF449C00F8D31F /* aeffguieditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = aeffguieditor.cpp; path = vstgui.sf/vstgui/aeffguieditor.cpp; sourceTree = "<group>"; };
 		DCB17D1B14FF44DD00F8D31F /* vstcontrols.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstcontrols.cpp; path = vstgui.sf/vstgui/vstcontrols.cpp; sourceTree = "<group>"; };
 		DCB17D1E14FF44F000F8D31F /* vstgui.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = vstgui.cpp; path = vstgui.sf/vstgui/vstgui.cpp; sourceTree = "<group>"; };
@@ -130,7 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7928CF19AA9F6A00B2B1A5 /* SDL2.framework in Frameworks */,
+				9F79292319AAC02C00B2B1A5 /* OpenGL.framework in Frameworks */,
+				9F79292619AAE48700B2B1A5 /* QuickTime.framework in Frameworks */,
+				9F79292719AAE48700B2B1A5 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +168,7 @@
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9F7928B419AA597900B2B1A5 /* SDL2.framework */,
+				9F79292219AAC02C00B2B1A5 /* OpenGL.framework */,
 				F4476B78093DD675008998C4 /* QuickTime.framework */,
 				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
 			);
@@ -371,7 +374,7 @@
 				9F7928A119A945F400B2B1A5 /* Resources */,
 				9F7928A219A945F400B2B1A5 /* Sources */,
 				9F7928A819A945F400B2B1A5 /* Frameworks */,
-				9F7928B619AA5F7E00B2B1A5 /* CopyFiles */,
+				9F7928B619AA5F7E00B2B1A5 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -589,6 +592,7 @@
 		9F79289119A9235100B2B1A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				INFOPLIST_FILE = "sine-wave/source/sine-wave.plist";
 				PRODUCT_NAME = "sine-wave";
 			};
@@ -597,10 +601,7 @@
 		9F79289219A9235100B2B1A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				INFOPLIST_FILE = "sine-wave/source/sine-wave.plist";
 				PRODUCT_NAME = "sine-wave";
 			};
@@ -609,40 +610,45 @@
 		9F7928AA19A945F400B2B1A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "sine-wave copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "drone-capture";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		9F7928AB19A945F400B2B1A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "sine-wave copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "drone-capture";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 		F4476972093DAE42008998C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = adelay;
 			};
@@ -651,10 +657,7 @@
 		F4476973093DAE42008998C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				PRODUCT_NAME = adelay;
 			};
 			name = Release;
@@ -683,6 +686,7 @@
 		F4FF52250929FBF500DDED7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				PRODUCT_NAME = vstxsynth;
 			};
 			name = Debug;
@@ -690,10 +694,7 @@
 		F4FF52260929FBF500DDED7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				PRODUCT_NAME = vstxsynth;
 			};
 			name = Release;

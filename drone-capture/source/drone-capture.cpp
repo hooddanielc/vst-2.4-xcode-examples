@@ -4,7 +4,7 @@
 #include <memory>
 #include <map>
 
-#include <SDL2/SDL.h>
+#include <Carbon/Carbon.h>
 
 #include "public.sdk/source/vst2.x/audioeffectx.h"
 #include "public.sdk/source/vst2.x/aeffeditor.h"
@@ -40,54 +40,34 @@ public:
   ERect rect;
 
   DroneCaptureEditor(AudioEffect *effect) : AEffEditor(effect) {
-    rect.left = rect.top = rect.right = rect.bottom = 0;
+    rect.left = 100;
+    rect.top = 100;
+    rect.right = 640;
+    rect.bottom = 480;
     effect->setEditor(this);
-
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
-      LogS("Error: SDL Could not initiate");
-    }
   }
 
   virtual bool getRect(ERect** mRect) {
-    LogS("Get Rect");
     *mRect = &rect;
     return true;
   }
 
   virtual bool open(void *window) {
-    systemWindow = SDL_CreateWindow(
-      "Hello World!",
-      100,
-      100,
-      640,
-      480,
-      SDL_WINDOW_SHOWN
-    );
+    systemWindow = window;
     return true;
   }
 
-  virtual void idle() {
-    // check for SDL_Events
-    SDL_Event e;
-
-    while(SDL_PollEvent(&e)) {
-      if (e.type == SDL_WINDOWEVENT) {
-        switch (e.window.event) {
-          case SDL_WINDOWEVENT_CLOSE:
-            close();
-        }
-      }
-    }
+  virtual bool isOpen() {
+    return systemWindow != 0;
   }
 
+  virtual void idle() {}
+
   virtual void close() {
-    SDL_DestroyWindow(static_cast<SDL_Window*>(systemWindow));
     systemWindow = 0;
   }
 
-  ~DroneCaptureEditor () {
-    SDL_Quit();
-  }
+  ~DroneCaptureEditor () {}
 };
 
 class DroneCapture : public AudioEffectX {
